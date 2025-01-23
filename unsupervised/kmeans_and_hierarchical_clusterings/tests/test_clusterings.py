@@ -1,14 +1,12 @@
+"""
+Tests for K-Means and Hierarchical Clustering.
+"""
 import unittest
 # ...existing code...
 
 class TestClusterings(unittest.TestCase):
-    # ...existing code...
-    def test_kmeans_clusters(self):
-        # Placeholder test for K-Means
-        self.assertTrue(True)
-
-    def test_hierarchical_clusters(self):
-        # Placeholder test for Hierarchical Clustering
+    def test_placeholder(self):
+        """Ensure test structure is valid."""
         self.assertTrue(True)
 
 # ...existing code...

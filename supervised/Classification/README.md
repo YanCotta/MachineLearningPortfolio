@@ -127,6 +127,47 @@ Each script loads the dataset, splits data, scales features (where applicable), 
 | Logistic Regression| 89%     | Low           | Low          | Excellent   |
 | Neural Network    | 94%      | High          | Medium       | Good        |
 
+## 📁 Project Structure
+```
+Classification/
+├── data/                   # Dataset directory
+│   └── Social_Network_Ads.csv
+├── src/                    # Source code
+│   ├── logistic_regression.py
+│   ├── kernel_svm.py
+│   ├── naive_bayes.py
+│   └── ...
+├── tests/                  # Test files
+│   └── test_models.py
+├── requirements.txt        # Project dependencies
+├── README.md              # Project documentation
+```
+
+## 🚀 Getting Started
+
+### Installation
+```bash
+# Create and activate virtual environment
+python -m venv venv
+source venv/bin/activate  # Unix
+venv\Scripts\activate     # Windows
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+### Running Tests
+```bash
+# Run all tests
+python -m pytest tests/
+
+# Run specific test file
+python -m pytest tests/test_models.py
+
+# Run with verbose output
+python -m pytest -v tests/
+```
+
 ## 🛠️ Installation
 
 Detailed dependencies:
@@ -173,3 +214,6 @@ joblib>=1.0.0
 Yan Cotta - yanpcotta@gmail.com
 
 Project Link: [https://github.com/YanCotta/SupervisedMLClassificationModels](https://github.com/YanCotta/SupervisedMLClassificationModels)
+
+## 📝 License
+This project is licensed under the MIT License - see the [LICENSE](../../LICENSE) file for details.

@@ -16,9 +16,23 @@ This repository demonstrates a simple Thompson Sampling approach to finding the 
 3. Run the main script:  
    python thompson_sampling.py  
 
+## Installation
+Run:
+```bash
+pip install -r requirements.txt
+```
+
+## Testing
+Run:
+```bash
+pytest tests/
+```
+
 ## Tests
 Use pytest or run tests directly:  
    pytest test_thompson_sampling.py  
 
 ## License
+This sub-project is under the main project’s [LICENSE](../../LICENSE).
+
 This project is provided for educational purposes.

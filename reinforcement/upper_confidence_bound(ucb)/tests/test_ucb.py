@@ -2,6 +2,7 @@
 import unittest
 import numpy as np
 import pandas as pd
+import pytest
 # ...existing code...
 
 class TestUCB(unittest.TestCase):
@@ -20,6 +21,9 @@ class TestUCB(unittest.TestCase):
         # Ensure it completes without errors and returns reasonable output
         # ...existing code...
         self.assertTrue(True)  # Placeholder assertion
+
+def test_ucb_basic():
+    assert True  # Replace with real test logic
 
 if __name__ == '__main__':
     unittest.main()

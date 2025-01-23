@@ -33,6 +33,7 @@ python src/natural_language_processing.py
 ```
 
 ## Testing
+Run the tests with:
 ```
 python -m unittest discover -s tests
 ```
@@ -40,3 +41,11 @@ python -m unittest discover -s tests
 ## Notes
 - Adjust column indices in SimpleImputer and ColumnTransformer to suit your data.
 - Set `test_size` and `random_state` as needed.
+
+## License
+This project is covered under the LICENSE at the root of this repository.
+
+## Structure
+- src: main NLP script
+- tests: unit tests
+- docs: additional documentation

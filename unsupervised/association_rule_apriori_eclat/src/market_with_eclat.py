@@ -1,28 +1,14 @@
 """
 ECLAT (Equivalence Class Clustering and bottom-up Lattice Traversal) Implementation
--------------------------------------------------------------------------------
-This script implements the ECLAT algorithm for market basket analysis.
-ECLAT differs from Apriori by using a vertical database format and set intersections
-to compute support values, making it more efficient for some datasets.
-
-Key Concepts:
-- Support: Frequency of itemset appearance in all transactions
-- Vertical Data Format: Items stored with transaction IDs they appear in
-- Set Intersection: Used to find common transactions between items
-
-Author: Yan Cotta
-Version: 1.0
 """
 
-# Required Libraries
-import numpy as np
-import matplotlib.pyplot as plt
 import pandas as pd
+import matplotlib.pyplot as plt
 import seaborn as sns
 from pathlib import Path
 
 class EclatAnalyzer:
-    """Implementation of ECLAT algorithm for market basket analysis"""
+    """Implementation of ECLAT algorithm for market basket analysis."""
     
     def __init__(self, min_support=0.003):
         """
@@ -37,32 +23,13 @@ class EclatAnalyzer:
         self.item_set = None
         
     def load_data(self, filepath):
-        """
-        Load and preprocess transaction data
-        
-        Parameters:
-            filepath (str): Path to CSV file containing transactions
-        """
-        try:
-            # Read data and convert to list of transactions
-            dataset = pd.read_csv(filepath, header=None)
-            self.transactions = []
-            for i in range(len(dataset)):
-                # Filter out nan values and convert to string
-                transaction = [str(item) for item in dataset.values[i] if str(item) != 'nan']
-                self.transactions.append(transaction)
-            
-            self.n_transactions = len(self.transactions)
-            # Get unique items
-            self.item_set = set(item for transaction in self.transactions 
-                            for item in transaction)
-            
-            print(f"Loaded {self.n_transactions} transactions with {len(self.item_set)} unique items")
-            return True
-            
-        except Exception as e:
-            print(f"Error loading data: {str(e)}")
-            return False
+        """Load transactions from CSV."""
+        df = pd.read_csv(filepath, header=None)
+        self.transactions = [
+            [str(item) for item in row if str(item) != 'nan']
+            for row in df.values
+        ]
+        self.n_transactions = len(self.transactions)
 
     def find_frequent_itemsets(self):
         """
@@ -84,7 +51,7 @@ class EclatAnalyzer:
         return list(rules)
 
     def get_results_df(self, rules):
-        """Convert rules to pandas DataFrame"""
+        """Convert rules to pandas DataFrame."""
         def process_results(results):
             item1 = [tuple(result[2][0][0])[0] for result in results]
             item2 = [tuple(result[2][0][1])[0] for result in results]
@@ -124,7 +91,7 @@ class EclatAnalyzer:
         plt.close()
 
 def main():
-    """Main execution function"""
+    """Main execution for ECLAT analysis."""
     try:
         # Initialize analyzer
         analyzer = EclatAnalyzer(min_support=0.003)

@@ -28,3 +28,12 @@ pip install -r requirements.txt
 ## Notes
 - Adjust column indices in SimpleImputer and ColumnTransformer to suit your data.
 - Set `test_size` and `random_state` as needed.
+
+## License
+See the root LICENSE for project licensing details.
+
+## Testing
+Run tests for this sub-project:
+```
+python -m unittest discover -s tests
+```

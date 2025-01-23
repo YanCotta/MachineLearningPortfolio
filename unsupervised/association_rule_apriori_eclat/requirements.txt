@@ -1,6 +1,7 @@
-numpy
-pandas
-matplotlib
+numpy>=1.19.0
+pandas>=1.2.0
+matplotlib>=3.3.0
 scikit-learn
 scipy
-seaborn
+seaborn>=0.11.0
+apyori>=1.1.2

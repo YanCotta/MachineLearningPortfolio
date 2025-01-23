@@ -398,3 +398,10 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# Ignore virtual environments
+.venv/
+# Ignore large data folders
+data/
+# Node modules (if any JS tools are used)
+node_modules/

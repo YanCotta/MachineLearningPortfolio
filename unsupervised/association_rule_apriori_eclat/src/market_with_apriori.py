@@ -81,6 +81,7 @@ class MarketAnalyzer:
         plt.close()
 
 def main():
+    """Main execution for Apriori analysis."""
     try:
         # Initialize and run analysis
         analyzer = MarketAnalyzer()

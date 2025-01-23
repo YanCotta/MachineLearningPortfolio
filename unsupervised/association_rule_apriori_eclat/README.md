@@ -46,6 +46,12 @@ apyori>=1.1.2
 | Medium      | 10,000       | 2.5s           |
 | Large       | 100,000      | 12.3s          |
 
+## Requirements
+Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
 ## Usage
 1. Install required packages:
    ```bash
@@ -64,6 +70,17 @@ apyori>=1.1.2
    python -m unittest discover -s tests
    ```
 
+## Running the Analysis
+```bash
+python src/market_with_apriori.py
+python src/market_with_eclat.py
+```
+
+## Testing
+```bash
+pytest tests/
+```
+
 ## Contributing
 Feel free to contribute as much as you want!!
 
@@ -74,7 +91,7 @@ Feel free to contribute as much as you want!!
 - [GitHub](https://github.com/YanCotta)
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This sub-project follows the [MIT License](../../../../LICENSE). Please see the root for details.
 
 ## Acknowledgments
 - Apyori library team

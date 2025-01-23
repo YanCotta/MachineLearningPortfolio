@@ -75,6 +75,29 @@ To run all tests:
 python -m unittest discover tests
 ```
 
+# K-Means & Hierarchical Clustering
+
+## Requirements
+Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+## Running
+To run clustering scripts:
+```bash
+python src/k_means_clustering.py
+python src/hierarchical_clustering.py
+```
+
+## Tests
+```bash
+pytest tests/
+```
+
+## License
+This sub-project is covered under the [MIT License](../../../../LICENSE).
+
 ## 📦 Requirements
 
 ```

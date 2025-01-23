@@ -19,5 +19,19 @@ This repository contains:
 • Each row in Ads_CTR_Optimisation.csv represents a round of displaying various ads.  
 • 1 indicates a click, 0 indicates no click.
 
+## Installation
+Run:
+```bash
+pip install -r requirements.txt
+```
+
+## Testing
+Run:
+```bash
+pytest tests/
+```
+
 ## License
+This sub-project is covered under the main repository’s [LICENSE](../../LICENSE).
+
 Use and distribution for educational and professional purposes.

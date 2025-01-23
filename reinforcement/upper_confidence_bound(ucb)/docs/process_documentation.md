@@ -7,6 +7,8 @@ Process Outline:
 3. Track cumulative rewards and ad selections.
 4. Visualize or print the final results.
 
+Refer to the main repository LICENSE for usage rights.
+
 Key Points:
 • The dataset is structured with each row representing a round of ad selection possibilities.  
 • The script uses mathematical properties of confidence bounds to balance exploration and exploitation.  
