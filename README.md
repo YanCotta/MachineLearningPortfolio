@@ -45,7 +45,7 @@ Below is a high-level summary of each sub-folder, with more details available in
 3. Explore individual README.md files for usage instructions and implementation details.
 
 ## License
-This project is licensed under the MIT License.
+This project is licensed under the MIT License. Check "LICENSE" file.
 
 ## Contact
 For inquiries, email: yanpcotta@gmail.com

@@ -1,6 +1,9 @@
 MIT License
 
-Copyright (c) 2025 Yan Cotta
+Original Dataset Copyright (c) SuperDataScience
+Code Implementation Copyright (c) 2025 Yan Cotta
+
+This project utilizes datasets provided by SuperDataScience through their Machine Learning courses. While the datasets are the intellectual property of SuperDataScience, the code implementation, modifications, and customizations are original work by Yan Cotta.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
