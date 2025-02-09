@@ -1,11 +1,24 @@
-# Machine Learning Regression Model Templates
-![Python](https://img.shields.io/badge/python-v3.8%2B-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
-![Dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen)
-![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange)
+<div align="center">
 
-## 🎯 Overview
-Production-grade implementation templates for industry-standard regression algorithms, designed for both educational purposes and enterprise deployment. This repository emphasizes best practices, performance optimization, and practical applications.
+# 🤖 Machine Learning Regression Model Templates
+
+[![Python](https://img.shields.io/badge/Python-3.8+-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+[![Dependencies](https://img.shields.io/badge/Dependencies-Current-brightgreen?style=for-the-badge)](requirements.txt)
+[![Contributions](https://img.shields.io/badge/Contributions-Welcome-orange?style=for-the-badge)](CONTRIBUTING.md)
+
+*Production-grade implementation templates for industry-standard regression algorithms*
+
+[Features](#features) • [Installation](#-installation) • [Usage](#-usage) • [Models](#-models) • [Contributing](#-contributing)
+
+---
+</div>
+
+## 📌 Overview
+Production-grade implementation templates designed for both educational purposes and enterprise deployment. Emphasizing:
+- ✨ Best practices
+- 🚀 Performance optimization
+- 💡 Practical applications
 
 ## 🚀 Quick Start
 ```python
@@ -177,5 +190,3 @@ scores = validator.validate(X, y, cv=5)
 ## 📝 License
 Distributed under the MIT License. See `LICENSE` for more information.
 
-## 📬 Contact
-Project Link: [https://github.com/YanCotta/SupervisedMLRegressionModelsTemplates](https://github.com/YanCotta/SupervisedMLRegressionModelsTemplates)
