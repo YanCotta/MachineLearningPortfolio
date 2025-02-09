@@ -1,38 +1,63 @@
-# README.md
-## Overview
-This repository demonstrates a simple Thompson Sampling approach to finding the best ad from a dataset ("Ads_CTR_Optimisation.csv").
+# Thompson Sampling Implementation 🎯
 
-## Files
-• thompson_sampling.py // ...existing code...  
-• Ads_CTR_Optimisation.csv // ...data file...  
-• requirements.txt (project dependencies)  
-• process_documentation.md (data and process info)  
-• test_thompson_sampling.py (basic automated tests)  
+[![Python](https://img.shields.io/badge/Python-3.7%2B-blue.svg)](https://www.python.org/downloads/)
+[![License](https://img.shields.io/badge/License-See%20Main-orange.svg)](../../LICENSE)
+[![Tests](https://img.shields.io/badge/Tests-Pytest-green.svg)](tests/)
 
-## Setup
-1. Clone the repository.  
-2. Install dependencies:  
-   pip install -r requirements.txt  
-3. Run the main script:  
-   python thompson_sampling.py  
+## 📝 Overview
+A robust implementation of the Thompson Sampling algorithm for multi-armed bandit problems, demonstrated through an advertising optimization case study.
 
-## Installation
-Run:
+## 🗂️ Project Structure
+```
+.
+├── thompson_sampling.py     # Main implementation
+├── Ads_CTR_Optimisation.csv # Dataset
+├── requirements.txt         # Dependencies
+├── process_documentation.md # Implementation details
+└── test_thompson_sampling.py # Test suite
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Python 3.7 or higher
+- pip package manager
+
+### Installation
 ```bash
+# Clone the repository
+git clone <repository-url>
+
+# Navigate to the project directory
+cd reinforcement/thompson_sampling
+
+# Install dependencies
 pip install -r requirements.txt
 ```
 
-## Testing
-Run:
+### Usage
+Run the main script:
 ```bash
-pytest tests/
+python thompson_sampling.py
 ```
 
-## Tests
-Use pytest or run tests directly:  
-   pytest test_thompson_sampling.py  
+## 🧪 Testing
+Execute the test suite using pytest:
+```bash
+# Run all tests
+pytest tests/
 
-## License
-This sub-project is under the main project’s [LICENSE](../../LICENSE).
+# Run specific test file
+pytest test_thompson_sampling.py
+```
 
-This project is provided for educational purposes.
+## 📚 Documentation
+For detailed information about the implementation and data processing, refer to `process_documentation.md`.
+
+## 📄 License
+This project is licensed under the terms of the main project license. See [LICENSE](../../LICENSE) for details.
+
+---
+<div align="center">
+    <i>Built for educational purposes | Contributions welcome</i>
+</div>
