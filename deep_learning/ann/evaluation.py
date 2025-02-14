@@ -1,3 +1,12 @@
+"""
+Model Evaluation and Visualization Module
+Provides comprehensive model evaluation tools including:
+- Training history visualization (accuracy and loss curves)
+- Confusion matrix plotting
+- ROC curve analysis
+These visualizations help in understanding model performance and identifying potential issues.
+"""
+
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.metrics import confusion_matrix, classification_report, roc_curve, auc
