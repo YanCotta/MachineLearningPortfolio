@@ -1,3 +1,9 @@
+"""
+Neural Network Model Builder for Bank Customer Churn Prediction
+This module implements a deep neural network using TensorFlow/Keras for predicting customer churn.
+The architecture includes multiple dense layers with batch normalization and dropout for regularization.
+"""
+
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout, BatchNormalization
