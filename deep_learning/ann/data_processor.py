@@ -1,3 +1,13 @@
+"""
+Data Processing Module for Bank Customer Data
+This module handles all data preprocessing tasks including:
+- Loading raw data from CSV
+- Encoding categorical variables (Geography and Gender)
+- Feature scaling using StandardScaler
+- Train-test splitting
+- Single prediction preparation
+"""
+
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import StandardScaler, LabelEncoder
