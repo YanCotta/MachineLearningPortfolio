@@ -1,3 +1,12 @@
+"""
+Main Application Module for Bank Customer Churn Prediction
+This is the entry point of the application that:
+1. Orchestrates the data processing pipeline
+2. Initializes and trains the neural network model
+3. Performs model evaluation
+4. Provides example predictions for new customers
+"""
+
 from data_processor import BankDataProcessor
 from model_builder import BankChurnModel
 from evaluation import ModelEvaluator
