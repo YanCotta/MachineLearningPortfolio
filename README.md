@@ -37,7 +37,13 @@ This repository serves as a showcase of my growing expertise in machine learning
   - Logistic Regression, K-NN, SVM, Kernel SVM, Naive Bayes, Decision Tree, Random Forest
   - [Documentation](/supervised/Classification/README.md)
 
-### 3. Reinforcement Learning 🎮
+### 3. Deep Learning 🧠
+- **Artificial Neural Network (ANN)**
+  - Bank customer churn prediction model
+  - Includes data preprocessing, model building, and evaluation
+  - [Documentation](/deep_learning/ann/README.md)
+
+### 4. Reinforcement Learning 🎮
 - **Upper Confidence Bound (UCB)**
   - Ad selection optimization
   - [Documentation](/reinforcement/upper_confidence_bound(ucb)/README.md)
@@ -46,12 +52,12 @@ This repository serves as a showcase of my growing expertise in machine learning
   - Advanced ad optimization strategy
   - [Documentation](/reinforcement/thompson_sampling/README.md)
 
-### 4. Natural Language Processing 📝
+### 5. Natural Language Processing 📝
 - Text preprocessing pipeline
 - Tokenization & stopword removal
 - [Documentation](/nlp/README.md)
 
-### 5. Data Preprocessing ⚙️
+### 6. Data Preprocessing ⚙️
 - Missing data handling
 - Categorical variable encoding
 - Feature scaling
