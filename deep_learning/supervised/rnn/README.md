@@ -1,59 +1,68 @@
-# Stock Price Prediction using LSTM
+# 📈 Stock Price Prediction using LSTM
 
-This project implements a deep learning model using Long Short-Term Memory (LSTM) networks to predict stock prices. The model is trained on historical Google stock price data and can be used to predict future price movements.
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.0%2B-orange.svg)](https://tensorflow.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-## Features
+> A sophisticated deep learning solution leveraging LSTM networks for accurate stock price prediction, demonstrated using Google stock data.
 
-- Multi-layer LSTM architecture with dropout for better generalization
-- Comprehensive data preprocessing and scaling
-- Model checkpointing and early stopping
-- Detailed logging system
-- Visualization of predictions and training metrics
-- Modular and maintainable code structure
+## 🌟 Key Features
 
-## Project Structure
+- **Advanced Architecture**
+  - Multi-layer LSTM with dropout
+  - Optimized for time series prediction
+  - State-of-the-art preprocessing pipeline
 
-```
-.
-├── data/
+- **Production Ready**
+  - Model checkpointing
+  - Early stopping mechanism
+  - Comprehensive logging system
+  - Performance visualization suite
+
+## 🏗️ Project Structure
+
+```bash
+stock-prediction/
+├── 📊 data/
 │   ├── Google_Stock_Price_Train.csv
 │   └── Google_Stock_Price_Test.csv
-├── logs/
-├── models/
-├── plots/
-├── src/
+├── 📝 logs/
+├── 💾 models/
+├── 📈 plots/
+├── 📁 src/
 │   ├── data_processor.py
 │   ├── model.py
 │   └── train.py
-├── tests/
+├── 🧪 tests/
 ├── requirements.txt
 └── README.md
 ```
 
-## Installation
+## 🚀 Quick Setup
 
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd stock-price-prediction
-```
+### Prerequisites
+- Python 3.8+
+- pip package manager
+- Virtual environment (recommended)
 
-2. Create and activate a virtual environment (recommended):
+### Installation
+
 ```bash
+# Clone repository
+git clone <url>
+
+# Create virtual environment
 python -m venv venv
-source venv/bin/activate  # On Windows, use: venv\Scripts\activate
-```
+source venv/bin/activate  # Windows: venv\Scripts\activate
 
-3. Install the required packages:
-```bash
+# Install dependencies
 pip install -r requirements.txt
 ```
 
-## Usage
+## 💻 Usage
 
-### Training the Model
-
-To train the model, run the training script with the required arguments:
+### Training Configuration
 
 ```bash
 python src/train.py \
@@ -64,57 +73,70 @@ python src/train.py \
     --sequence-length 60
 ```
 
-### Arguments
+### Configuration Options
 
-- `--train-data`: Path to the training data CSV file
-- `--test-data`: Path to the test data CSV file
-- `--epochs`: Number of training epochs (default: 100)
-- `--batch-size`: Batch size for training (default: 32)
-- `--sequence-length`: Number of time steps to look back (default: 60)
+| Parameter | Description | Default |
+|-----------|-------------|---------|
+| `--train-data` | Training dataset path | Required |
+| `--test-data` | Test dataset path | Required |
+| `--epochs` | Training epochs | 100 |
+| `--batch-size` | Batch size | 32 |
+| `--sequence-length` | Lookback window | 60 |
 
-## Model Architecture
+## 🎯 Model Architecture
 
-The LSTM model consists of:
-- 3 LSTM layers with 50 units each
-- Dropout layers (0.2) after each LSTM layer
-- Final Dense layer for prediction
+### Components
+- **LSTM Layers**
+  - 3x LSTM layers (50 units each)
+  - Dropout (0.2) for regularization
+  - Dense output layer
 
-## Data Format
+## 📊 Data Requirements
 
-The input data should be CSV files with the following columns:
-- Date
-- Open
-- High
-- Low
-- Close
-- Volume
+### Input Format
+```csv
+Date,Open,High,Low,Close,Volume
+2022-01-01,2500.00,2550.00,2480.00,2520.00,1000000
+...
+```
 
-The model uses the 'Close' price for predictions.
+## 📈 Performance Visualization
 
-## Results
+Track model performance through:
+- Real-time training metrics
+- Prediction accuracy plots
+- Loss convergence curves
 
-Training results and visualizations are saved in the `plots/` directory:
-- `training_results.png`: Actual vs Predicted prices for training data
-- `test_results.png`: Actual vs Predicted prices for test data
-- `training_history.png`: Training and validation loss curves
+## 🤝 Contributing
 
-## Logging
+We welcome contributions! Follow these steps:
 
-Training logs are automatically saved in the `logs/` directory with timestamps.
+1. 🍴 Fork the repository
+2. 🌿 Create your feature branch
+   ```bash
+   git checkout -b feature/AmazingFeature
+   ```
+3. 💫 Commit your changes
+   ```bash
+   git commit -m 'Add some AmazingFeature'
+   ```
+4. 📤 Push to the branch
+   ```bash
+   git push origin feature/AmazingFeature
+   ```
+5. 🎁 Open a Pull Request
 
-## Contributing
+## 📄 License
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## License
+## 🙏 Acknowledgments
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+- Dataset: Google Stock Price historical data
+- Architecture: Based on state-of-the-art LSTM research
+- Community: TensorFlow and Python ecosystems
 
-## Acknowledgments
-
-- Data source: Google Stock Price dataset
-- Based on LSTM architecture for time series prediction
+---
+<p align="center">
+  <i>Built with 📊 by <a href="https://github.com/YanCotta">Yan Cotta</a></i>
+</p>
