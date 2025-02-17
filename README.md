@@ -43,6 +43,12 @@ This repository serves as a showcase of my growing expertise in machine learning
   - Includes data preprocessing, model building, and evaluation
   - [Documentation](/deep_learning/ann/README.md)
 
+- **Recurrent Neural Network (RNN)**
+  - Stock price prediction using LSTM
+  - Features multi-layer architecture with dropout
+  - Comprehensive data preprocessing and visualization
+  - [Documentation](/deep_learning/supervised/rnn/README.md)
+
 ### 4. Reinforcement Learning 🎮
 - **Upper Confidence Bound (UCB)**
   - Ad selection optimization
