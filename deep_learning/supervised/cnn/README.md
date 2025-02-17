@@ -1,73 +1,83 @@
-# Binary Image Classification CNN
+# 🔍 Binary Image Classification CNN
 
-A professional implementation of a Convolutional Neural Network (CNN) for binary image classification, specifically designed for the cats vs dogs classification task. This project demonstrates industry-standard best practices in deep learning, including modular architecture, comprehensive evaluation metrics, and experiment tracking.
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.0%2B-orange.svg)](https://tensorflow.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-![Sample Predictions](docs/assets/sample_predictions.png)
+> A state-of-the-art CNN implementation for binary image classification, showcasing industry-standard deep learning practices through a cats vs. dogs classification task.
 
-## Project Overview
+## 🌟 Highlights
 
-This CNN implementation features:
-- Modern CNN architecture with batch normalization and dropout
-- Comprehensive data augmentation pipeline
-- Advanced training features (learning rate scheduling, early stopping)
-- Extensive evaluation metrics and visualizations
-- TensorBoard integration for experiment tracking
-- Modular and maintainable codebase structure
+- **Modern Architecture**
+  - Advanced CNN design with batch normalization
+  - Dropout regularization for better generalization
+  - State-of-the-art optimization techniques
 
-## Dataset
+- **Production Quality**
+  - Comprehensive data augmentation pipeline
+  - Learning rate scheduling & early stopping
+  - TensorBoard integration for monitoring
+  - Modular, maintainable codebase
 
-The dataset consists of over 10,000 labeled images of cats and dogs. Due to its size, the dataset is hosted on Google Drive:
-[Download Dataset](https://drive.google.com/file/d/1vtO7vdRndB0fCsz6RYCgH6DiYWLY7GUG/view?usp=sharing)
+## 📊 Model Performance
 
-## Project Structure
+| Metric | Score |
+|--------|-------|
+| Training Accuracy | ~95% |
+| Validation Accuracy | ~92% |
+| AUC-ROC Score | ~0.95 |
 
-```
+## 🏗️ Project Structure
+
+```bash
 cnn_project/
-├── data/                    # Data directory (download dataset here)
-├── docs/                    # Documentation and assets
-├── notebooks/              # Jupyter notebooks for exploration
-├── src/                    # Source code
-│   ├── data_processor/     # Data loading and preprocessing
-│   ├── model/              # Model architecture
-│   ├── evaluation/         # Evaluation metrics and visualization
-│   └── training/           # Training pipeline
-├── tests/                  # Unit tests
-├── main.py                 # Main execution script
-├── requirements.txt        # Project dependencies
-└── setup.py               # Package installation
+├── 📁 data/                # Dataset storage
+├── 📁 docs/                # Documentation & assets
+├── 📁 notebooks/           # Jupyter notebooks
+├── 📁 src/                 # Source code
+│   ├── data_processor/     # Data pipeline
+│   ├── model/             # CNN architecture
+│   ├── evaluation/        # Metrics & visualization
+│   └── training/          # Training pipeline
+├── 📁 tests/              # Unit tests
+├── main.py                # Entry point
+├── requirements.txt       # Dependencies
+└── setup.py              # Package config
 ```
 
-## Installation
+## 🔧 Quick Setup
 
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/cnn_image_classifier.git
-cd cnn_image_classifier
-```
+### Prerequisites
+- Python 3.8+
+- CUDA-compatible GPU (recommended)
+- Virtual environment (recommended)
 
-2. Create and activate a virtual environment:
+### Installation
 ```bash
+# Clone repository
+git clone 
+
+# Set up virtual environment
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
+source venv/bin/activate  # Windows: venv\Scripts\activate
 
-3. Install dependencies:
-```bash
+# Install dependencies
 pip install -r requirements.txt
 ```
 
-4. Download the dataset and extract it to the `data` directory.
+### Dataset
+📥 [Download Dataset](https://drive.google.com/file/d/1vtO7vdRndB0fCsz6RYCgH6DiYWLY7GUG/view?usp=sharing)
+> 10,000+ labeled images of cats and dogs for training and validation
 
-## Usage
+## 🚀 Usage
 
-### Training
-
-Train the model with default parameters:
+### Basic Training
 ```bash
 python main.py --train-dir data/training_set --test-dir data/test_set
 ```
 
-Customize training parameters:
+### Advanced Configuration
 ```bash
 python main.py --train-dir data/training_set \
                --test-dir data/test_set \
@@ -77,53 +87,60 @@ python main.py --train-dir data/training_set \
                --experiment-name "high_res_training"
 ```
 
-### Model Evaluation
+## 🎛️ Model Architecture
 
-The training process automatically generates:
-- Training history plots
-- Confusion matrix
-- Sample predictions visualization
-- TensorBoard logs
+### Key Components
+- **Convolutional Blocks**
+  - Multiple layers with increasing filters
+  - Batch normalization for stability
+  - Spatial dropout for regularization
 
-View training progress in TensorBoard:
+- **Classification Head**
+  - Dense layers with dropout
+  - Binary cross-entropy loss
+  - Adam optimizer
+
+## 📈 Training Progress
+
+Monitor training in real-time:
 ```bash
 tensorboard --logdir logs/fit
 ```
 
-## Model Architecture
+## 🤝 Contributing
 
-The CNN architecture implements modern best practices:
-- Multiple convolutional blocks with increasing filter sizes
-- Batch normalization for training stability
-- Spatial dropout for regularization
-- Dense layers with dropout for classification
-- Binary cross-entropy loss with Adam optimizer
+We welcome contributions! Here's how:
 
-## Performance
+1. 🍴 Fork the repository
+2. 🌿 Create your feature branch
+   ```bash
+   git checkout -b feature/AmazingFeature
+   ```
+3. 💫 Commit your changes
+   ```bash
+   git commit -m 'Add some AmazingFeature'
+   ```
+4. 📤 Push to the branch
+   ```bash
+   git push origin feature/AmazingFeature
+   ```
+5. 🎁 Open a Pull Request
 
-The model achieves:
-- Training accuracy: ~95%
-- Validation accuracy: ~92%
-- AUC-ROC score: ~0.95
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Author
-
-Yan Cotta
-
-## Acknowledgments
-
-- The dataset used in this project is sourced from [Kaggle's Dogs vs Cats competition](https://www.kaggle.com/c/dogs-vs-cats)
-- Architecture inspired by modern CNN implementations in papers [ref1] and [ref2]
-
-## References
+## 📚 References
 
 1. [Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385)
-2. [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/abs/1502.03167)
+2. [Batch Normalization: Accelerating Deep Network Training](https://arxiv.org/abs/1502.03167)
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Dataset: [Kaggle's Dogs vs Cats competition](https://www.kaggle.com/c/dogs-vs-cats)
+- Architecture inspiration: ResNet and VGGNet
+
+---
+<p align="center">
+  <i>Developed with 💻 by <a href="https://github.com/YanCotta">Yan Cotta</a></i>
+</p>
