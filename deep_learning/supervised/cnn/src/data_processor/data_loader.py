@@ -56,7 +56,7 @@ class DataLoader:
         train_path: str,
         test_path: str
     ) -> Tuple[tf.keras.preprocessing.image.DirectoryIterator,
-               tf.keras.preprocessing.image.DirectoryIterator]:
+            tf.keras.preprocessing.image.DirectoryIterator]:
         """
         Load and prepare training and test datasets.
 
