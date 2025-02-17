@@ -1,25 +1,30 @@
-# Artificial Neural Network for Customer Churn Prediction
+# 🧠 Customer Churn Prediction using Artificial Neural Networks
 
-## Overview
-This project implements a sophisticated artificial neural network (ANN) for predicting customer churn in a banking context. Built from scratch using Python, it demonstrates advanced deep learning concepts while providing a practical business application.
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg)](https://github.com/YanCotta/MachineLearningPortfolio/graphs/commit-activity)
 
-## Features
-- Modular implementation of neural network components
-- Support for multiple hidden layers with configurable architectures
-- Various activation functions (ReLU, Sigmoid, Tanh)
-- Advanced optimization techniques:
-  - Mini-batch gradient descent
-  - Adaptive learning rates
-  - Momentum-based optimization
-- Comprehensive loss functions:
-  - Binary cross-entropy
-  - Mean squared error (MSE)
-  - Categorical cross-entropy
-- Robust model evaluation metrics
-- Data preprocessing utilities
-- Model persistence capabilities
+> A sophisticated deep learning solution for predicting customer churn in banking, implemented from scratch using Python.
 
-## Project Structure
+## 🎯 Key Features
+
+- **Modular Architecture**
+  - Component-based neural network implementation
+  - Configurable multi-layer support
+  - Flexible model customization
+
+- **Advanced Capabilities**
+  - Multiple activation functions (ReLU, Sigmoid, Tanh)
+  - Sophisticated optimization techniques
+  - Comprehensive loss function selection
+  - Robust evaluation metrics suite
+
+- **Production-Ready**
+  - Efficient data preprocessing pipeline
+  - Model persistence and versioning
+  - Performance optimization features
+
+## 🏗️ Project Structure
 ```
 ann/
 ├── __init__.py
@@ -30,21 +35,26 @@ ann/
 └── Churn_Modelling.csv  # Banking customer dataset
 ```
 
-## Dataset
-The project uses the Bank Customer Churn Prediction dataset (`Churn_Modelling.csv`) containing the following features:
-- Customer demographic information (age, gender, geography)
-- Banking relationship metrics (tenure, credit score, balance)
-- Product usage indicators (number of products, credit card status)
-- Target variable: Customer churn status (0 = retained, 1 = churned)
+## 📊 Dataset Overview
 
-## Installation
+The model is trained on a comprehensive banking dataset (`Churn_Modelling.csv`) containing:
+
+| Category | Features |
+|----------|----------|
+| Demographics | Age, Gender, Geography |
+| Banking Metrics | Tenure, Credit Score, Balance |
+| Product Usage | Number of Products, Credit Card Status |
+| Target Variable | Churn Status (0: Retained, 1: Churned) |
+
+## 🚀 Quick Start
+
+### Installation
 ```bash
 git clone <repository-url>
 cd MachineLearningPortfolio/deep_learning/ann
 pip install -r requirements.txt
 ```
 
-## Usage
 ### Basic Implementation
 ```python
 from data_processor import DataProcessor
@@ -63,9 +73,6 @@ model = NeuralNetwork([
 
 # Train the model
 model.fit(X_train, y_train, epochs=100, batch_size=32)
-
-# Evaluate performance
-accuracy = model.evaluate(X_test, y_test)
 ```
 
 ### Advanced Configuration
@@ -84,36 +91,60 @@ model.fit(
 )
 ```
 
-## Model Architecture
-The neural network implementation supports:
-- Flexible layer configuration
-- Multiple activation functions
-- Dropout regularization
-- Batch normalization
-- Weight initialization techniques
+## 🎛️ Model Architecture
 
-## Performance Metrics
-The model evaluation includes:
-- Accuracy
-- Precision
-- Recall
-- F1 Score
-- ROC-AUC
-- Confusion Matrix
+### Supported Features
+- **Layer Configuration**
+  - Dynamic layer depth and width
+  - Customizable activation functions
+  - Dropout regularization
+  - Batch normalization
 
-## Contributing
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+- **Optimization**
+  - Mini-batch gradient descent
+  - Adaptive learning rates
+  - Momentum optimization
 
-## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+## 📈 Performance Metrics
 
-## Citations
-If you use this implementation in your research, please cite:
-```
+Our comprehensive evaluation suite includes:
+
+| Metric | Description |
+|--------|-------------|
+| Accuracy | Overall prediction accuracy |
+| Precision | True positive prediction accuracy |
+| Recall | Positive case detection rate |
+| F1 Score | Harmonic mean of precision and recall |
+| ROC-AUC | Classification performance at various thresholds |
+| Confusion Matrix | Detailed prediction breakdown |
+
+## 🤝 Contributing
+
+We welcome contributions! Here's how you can help:
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📚 Citation
+
+```bibtex
 @misc{ann_churn_prediction,
-  author = Yan Cotta,
+  author = {Yan Cotta},
   title = {Neural Network Implementation for Customer Churn Prediction},
   year = {2025},
   publisher = {GitHub},
   url = {https://github.com/YanCotta/MachineLearningPortfolio}
 }
+```
+
+---
+<p align="center">
+  <i>Built with ❤️ by <a href="https://github.com/YanCotta">Yan Cotta</a></i>
+</p>
