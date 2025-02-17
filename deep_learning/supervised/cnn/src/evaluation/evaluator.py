@@ -85,8 +85,8 @@ class ModelEvaluator:
             plt.show()
 
     def evaluate_model(self, 
-                      model: tf.keras.Model, 
-                      test_data: tf.keras.preprocessing.image.DirectoryIterator) -> Dict[str, Any]:
+                    model: tf.keras.Model, 
+                    test_data: tf.keras.preprocessing.image.DirectoryIterator) -> Dict[str, Any]:
         """
         Perform comprehensive model evaluation.
 
@@ -112,8 +112,8 @@ class ModelEvaluator:
         
         # Get classification report
         report = classification_report(y_true, y_pred_classes, 
-                                     target_names=self.class_names, 
-                                     output_dict=True)
+                                    target_names=self.class_names, 
+                                    output_dict=True)
 
         return {
             'confusion_matrix': cm,
