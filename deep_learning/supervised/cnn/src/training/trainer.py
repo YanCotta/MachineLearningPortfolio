@@ -17,9 +17,9 @@ class ModelTrainer:
     """Handles model training and experiment management."""
 
     def __init__(self, 
-                 model,
-                 experiment_name: Optional[str] = None,
-                 checkpoint_dir: str = "checkpoints"):
+                model,
+                experiment_name: Optional[str] = None,
+                checkpoint_dir: str = "checkpoints"):
         """
         Initialize the trainer.
 
@@ -35,10 +35,10 @@ class ModelTrainer:
         self.history = None
 
     def train(self,
-             train_data: tf.keras.preprocessing.image.DirectoryIterator,
-             validation_data: tf.keras.preprocessing.image.DirectoryIterator,
-             epochs: int = 25,
-             initial_epoch: int = 0) -> tf.keras.callbacks.History:
+            train_data: tf.keras.preprocessing.image.DirectoryIterator,
+            validation_data: tf.keras.preprocessing.image.DirectoryIterator,
+            epochs: int = 25,
+            initial_epoch: int = 0) -> tf.keras.callbacks.History:
         """
         Train the model with the given data.
 
@@ -79,10 +79,10 @@ class ModelTrainer:
         return self.history
 
     def resume_training(self,
-                       train_data: tf.keras.preprocessing.image.DirectoryIterator,
-                       validation_data: tf.keras.preprocessing.image.DirectoryIterator,
-                       checkpoint_path: str,
-                       additional_epochs: int = 10) -> tf.keras.callbacks.History:
+                    train_data: tf.keras.preprocessing.image.DirectoryIterator,
+                    validation_data: tf.keras.preprocessing.image.DirectoryIterator,
+                    checkpoint_path: str,
+                    additional_epochs: int = 10) -> tf.keras.callbacks.History:
         """
         Resume training from a checkpoint.
 
