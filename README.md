@@ -43,6 +43,15 @@ This repository serves as a showcase of my growing expertise in machine learning
   - Includes data preprocessing, model building, and evaluation
   - [Documentation](/deep_learning/ann/README.md)
 
+- **Convolutional Neural Network (CNN)**
+  - Binary Image Classification (Cats vs Dogs)
+  - Features modern architecture with batch normalization and dropout
+  - Comprehensive data augmentation and evaluation pipeline
+  - TensorBoard integration for experiment tracking
+  - Professional modular codebase structure
+  - Performance: 92% validation accuracy, 0.95 AUC-ROC
+  - [Documentation](/deep_learning/supervised/cnn/README.md)
+
 - **Recurrent Neural Network (RNN)**
   - Stock price prediction using LSTM
   - Features multi-layer architecture with dropout
