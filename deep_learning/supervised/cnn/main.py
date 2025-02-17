@@ -21,17 +21,17 @@ def parse_args():
     """Parse command line arguments."""
     parser = argparse.ArgumentParser(description='Train and evaluate CNN model')
     parser.add_argument('--train-dir', type=str, required=True,
-                       help='Directory containing training data')
+                    help='Directory containing training data')
     parser.add_argument('--test-dir', type=str, required=True,
-                       help='Directory containing test data')
+                    help='Directory containing test data')
     parser.add_argument('--epochs', type=int, default=25,
-                       help='Number of epochs to train')
+                    help='Number of epochs to train')
     parser.add_argument('--batch-size', type=int, default=32,
-                       help='Batch size for training')
+                    help='Batch size for training')
     parser.add_argument('--img-size', type=int, nargs=2, default=[64, 64],
-                       help='Image dimensions (height width)')
+                    help='Image dimensions (height width)')
     parser.add_argument('--experiment-name', type=str,
-                       help='Name for this training run')
+                    help='Name for this training run')
     return parser.parse_args()
 
 def main():
