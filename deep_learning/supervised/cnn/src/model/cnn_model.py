@@ -40,7 +40,7 @@ class CNNModel:
         self.model = models.Sequential([
             # Input Convolutional Block
             layers.Conv2D(32, (3, 3), activation='relu', padding='same',
-                         input_shape=[*self.img_size, 3]),
+                        input_shape=[*self.img_size, 3]),
             layers.BatchNormalization(),
             layers.Conv2D(32, (3, 3), activation='relu', padding='same'),
             layers.BatchNormalization(),
