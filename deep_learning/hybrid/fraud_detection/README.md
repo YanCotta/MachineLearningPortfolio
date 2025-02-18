@@ -1,5 +1,10 @@
 # 🔍 Hybrid Fraud Detection System
 
+[![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=flat&logo=TensorFlow&logoColor=white)](https://www.tensorflow.org/)
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=flat&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 A sophisticated fraud detection system that combines unsupervised and supervised deep learning approaches. The system first uses Self-Organizing Maps (SOM) to detect anomalous patterns in credit card applications, then trains an Artificial Neural Network (ANN) to learn and classify these patterns.
 
 ## 🌟 Features
@@ -8,23 +13,27 @@ A sophisticated fraud detection system that combines unsupervised and supervised
   - Unsupervised pattern detection using SOM
   - Supervised classification using ANN
   - Transfer of knowledge between models
+  - Automatic threshold adjustment
   
 - **Advanced Data Processing**
-  - Automated feature scaling
-  - Separate preprocessing for SOM and ANN
-  - Comprehensive data validation
+  - Automated feature scaling optimized for each model
+  - Comprehensive data validation and cleaning
+  - Intelligent missing value handling
+  - Automatic infinite value detection
 
 - **Sophisticated Visualization Suite**
-  - SOM heatmaps with fraud overlays
-  - Feature importance analysis
-  - Fraud pattern distribution plots
-  - Model performance metrics
+  - Interactive SOM heatmaps with fraud overlays
+  - Feature importance analysis with sorted rankings
+  - Detailed fraud pattern distribution analysis
+  - Comprehensive performance metrics visualization
+  - High-resolution outputs (300 DPI)
 
 - **Production-Ready Architecture**
   - Modular, object-oriented design
-  - Comprehensive error handling
-  - Advanced logging system
-  - Clear documentation
+  - Comprehensive error handling and validation
+  - Advanced logging with rotation
+  - GPU acceleration support
+  - Memory-efficient processing
 
 ## 🏗️ Project Structure
 
@@ -80,24 +89,39 @@ fraud_detection/
    - Identifies suspicious patterns in data
    - Creates topology-preserving map of credit card applications
    - Detects anomalous cases based on neighborhood distances
+   - Automatically adjusts detection threshold if needed
 
 2. **Supervised Learning Phase (ANN)**
    - Takes SOM-detected patterns as training input
-   - Learns to classify between normal and fraudulent patterns
+   - Dynamic architecture based on input dimensions
    - Uses dropout and batch normalization for robust learning
+   - Early stopping to prevent overfitting
 
 3. **Visualization & Analysis**
-   - Generates SOM heatmaps showing fraud clusters
+   - Generates high-resolution SOM heatmaps showing fraud clusters
    - Plots feature distributions for detected frauds
-   - Shows feature importance in classification
+   - Shows sorted feature importance in classification
    - Provides detailed model performance metrics
 
-## 📈 Performance Metrics
+## 📈 Performance Features
 
-- SOM detection captures subtle anomalies in high-dimensional data
-- ANN achieves high precision in fraud classification
-- Combined approach reduces false positives
-- Visualization tools enable intuitive pattern analysis
+- **SOM Detection**
+  - Adaptive threshold adjustment
+  - Quantization error-based anomaly scoring
+  - Topology-preserving feature mapping
+  - Automatic hyperparameter optimization
+
+- **ANN Classification**
+  - Dynamic architecture scaling
+  - Gradient-based feature importance
+  - Advanced regularization techniques
+  - GPU acceleration support
+
+- **Visualization**
+  - High-resolution outputs (300 DPI)
+  - Comprehensive metric logging
+  - Automated report generation
+  - Interactive plot capabilities
 
 ## 🤝 Contributing
 
