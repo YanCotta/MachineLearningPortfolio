@@ -1,7 +1,7 @@
 # 🔍 Binary Image Classification CNN
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
-[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.0%2B-orange.svg)](https://tensorflow.org/)
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.8%2B-orange.svg)](https://tensorflow.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
@@ -9,44 +9,68 @@
 
 ## 🌟 Highlights
 
-- **Modern Architecture**
-  - Advanced CNN design with batch normalization
-  - Dropout regularization for better generalization
-  - State-of-the-art optimization techniques
+- **Advanced Architecture**
+  - Modern CNN with ResNet-style skip connections
+  - Batch normalization and advanced regularization
+  - Mixed precision training support
+  - Multi-GPU compatibility
+  - Configurable model parameters
 
-- **Production Quality**
-  - Comprehensive data augmentation pipeline
-  - Learning rate scheduling & early stopping
-  - TensorBoard integration for monitoring
-  - Modular, maintainable codebase
+- **Production Features**
+  - Advanced data augmentation with albumentations
+  - Mixed precision training
+  - Multi-threaded data loading
+  - Memory-efficient data generators
+  - Automatic dataset validation
+  - Comprehensive error handling
 
-## 📊 Model Performance
+- **Experiment Tracking**
+  - Weights & Biases integration
+  - MLflow support
+  - TensorBoard monitoring
+  - Advanced metric logging
+  - Training history visualization
 
-| Metric | Score |
-|--------|-------|
-| Training Accuracy | ~95% |
-| Validation Accuracy | ~92% |
-| AUC-ROC Score | ~0.95 |
+## 📊 Model Features
+
+- **Architecture**
+  - Configurable convolutional blocks
+  - Skip connections for better gradient flow
+  - Advanced regularization (L2, Dropout, BatchNorm)
+  - Mixed precision support
+
+- **Training**
+  - Learning rate scheduling
+  - Early stopping
+  - Model checkpointing
+  - Experiment tracking
+  - Training resumption support
+
+- **Evaluation**
+  - Comprehensive metrics (Accuracy, AUC, F1)
+  - Confusion matrix visualization
+  - Prediction visualization
+  - Training history plots
 
 ## 🏗️ Project Structure
 
 ```bash
-cnn_project/
-├── 📁 data/                # Dataset storage
-├── 📁 docs/                # Documentation & assets
-├── 📁 notebooks/           # Jupyter notebooks
-├── 📁 src/                 # Source code
-│   ├── data_processor/     # Data pipeline
-│   ├── model/             # CNN architecture
-│   ├── evaluation/        # Metrics & visualization
-│   └── training/          # Training pipeline
-├── 📁 tests/              # Unit tests
-├── main.py                # Entry point
-├── requirements.txt       # Dependencies
-└── setup.py              # Package config
+src/
+├── data_processor/          # Data loading and preprocessing
+│   ├── data_loader.py      # Advanced data loading with augmentation
+│   └── __init__.py
+├── model/                  # Model architecture
+│   ├── cnn_model.py       # Modern CNN implementation
+│   └── __init__.py
+├── training/              # Training pipeline
+│   ├── trainer.py        # Training with experiment tracking
+│   └── __init__.py
+└── evaluation/           # Evaluation tools
+    ├── evaluator.py     # Metrics and visualization
+    └── __init__.py
 ```
 
-## 🔧 Quick Setup
+## 🔧 Setup
 
 ### Prerequisites
 - Python 3.8+
@@ -54,9 +78,10 @@ cnn_project/
 - Virtual environment (recommended)
 
 ### Installation
+
 ```bash
 # Clone repository
-git clone 
+git clone <repository-url>
 
 # Set up virtual environment
 python -m venv venv
@@ -87,49 +112,35 @@ python main.py --train-dir data/training_set \
                --experiment-name "high_res_training"
 ```
 
-## 🎛️ Model Architecture
+### Configuration Options
+- `--train-dir`: Training data directory
+- `--test-dir`: Test data directory
+- `--epochs`: Number of training epochs
+- `--batch-size`: Batch size
+- `--img-size`: Input image dimensions
+- `--experiment-name`: Name for tracking experiments
 
-### Key Components
-- **Convolutional Blocks**
-  - Multiple layers with increasing filters
-  - Batch normalization for stability
-  - Spatial dropout for regularization
+## 📈 Monitoring
 
-- **Classification Head**
-  - Dense layers with dropout
-  - Binary cross-entropy loss
-  - Adam optimizer
-
-## 📈 Training Progress
-
-Monitor training in real-time:
-```bash
-tensorboard --logdir logs/fit
-```
+Monitor training in real-time through multiple platforms:
+- **TensorBoard**: `tensorboard --logdir logs/fit`
+- **Weights & Biases**: View experiments at wandb.ai
+- **MLflow**: Track experiments locally or on your MLflow server
 
 ## 🤝 Contributing
 
-We welcome contributions! Here's how:
-
-1. 🍴 Fork the repository
-2. 🌿 Create your feature branch
-   ```bash
-   git checkout -b feature/AmazingFeature
-   ```
-3. 💫 Commit your changes
-   ```bash
-   git commit -m 'Add some AmazingFeature'
-   ```
-4. 📤 Push to the branch
-   ```bash
-   git push origin feature/AmazingFeature
-   ```
-5. 🎁 Open a Pull Request
+See our [Contributing Guidelines](CONTRIBUTING.md) for details on:
+- Code style
+- Development process
+- Test requirements
+- Pull request process
 
 ## 📚 References
 
 1. [Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385)
 2. [Batch Normalization: Accelerating Deep Network Training](https://arxiv.org/abs/1502.03167)
+3. [Mixed Precision Training](https://arxiv.org/abs/1710.03740)
+4. [Albumentations: Fast and Flexible Image Augmentations](https://arxiv.org/abs/1809.06839)
 
 ## 📄 License
 
