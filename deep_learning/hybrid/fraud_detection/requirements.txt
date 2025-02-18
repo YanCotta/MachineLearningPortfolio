@@ -5,3 +5,6 @@ tensorflow>=2.8.0
 minisom>=2.3.0
 matplotlib>=3.4.0
 seaborn>=0.11.0
+pytest>=7.0.0
+pytest-cov>=3.0.0
+pytest-mock>=3.6.0
