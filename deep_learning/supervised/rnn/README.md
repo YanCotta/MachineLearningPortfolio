@@ -1,142 +1,158 @@
-# 📈 Stock Price Prediction using LSTM
+# 🚀 Advanced Stock Price Prediction with RNN
 
-[![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
-[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.0%2B-orange.svg)](https://tensorflow.org/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+A sophisticated implementation of a Recurrent Neural Network (RNN) for stock price prediction, featuring bidirectional LSTM layers, comprehensive technical indicators, and advanced evaluation metrics.
 
-> A sophisticated deep learning solution leveraging LSTM networks for accurate stock price prediction, demonstrated using Google stock data.
+## 🌟 Features
 
-## 🌟 Key Features
+- **Advanced Model Architecture**
+  - Bidirectional LSTM layers for better temporal pattern recognition
+  - Configurable multi-layer architecture
+  - Batch normalization for training stability
+  - Dropout regularization for preventing overfitting
+  - Adaptive learning rate scheduling
 
-- **Advanced Architecture**
-  - Multi-layer LSTM with dropout
-  - Optimized for time series prediction
-  - State-of-the-art preprocessing pipeline
+- **Technical Analysis Integration**
+  - Moving averages (MA7, MA20)
+  - Relative Strength Index (RSI)
+  - Moving Average Convergence Divergence (MACD)
+  - Bollinger Bands
+  - Customizable feature selection
 
-- **Production Ready**
-  - Model checkpointing
-  - Early stopping mechanism
-  - Comprehensive logging system
-  - Performance visualization suite
+- **Comprehensive Evaluation**
+  - Multiple performance metrics (MSE, RMSE, MAE, R², MAPE)
+  - Direction accuracy analysis
+  - Error distribution visualization
+  - Training history plots
+  - Detailed evaluation reports
 
-## 🏗️ Project Structure
+## 📋 Requirements
 
+- Python 3.8+
+- TensorFlow 2.8+
+- Additional dependencies in `requirements.txt`
+
+## 🚀 Quick Start
+
+1. Clone the repository:
 ```bash
-stock-prediction/
-├── 📊 data/
-│   ├── Google_Stock_Price_Train.csv
-│   └── Google_Stock_Price_Test.csv
-├── 📝 logs/
-├── 💾 models/
-├── 📈 plots/
-├── 📁 src/
-│   ├── data_processor.py
-│   ├── model.py
-│   └── train.py
-├── 🧪 tests/
-├── requirements.txt
-└── README.md
+git clone <repository-url>
+cd rnn
 ```
 
-## 🚀 Quick Setup
-
-### Prerequisites
-- Python 3.8+
-- pip package manager
-- Virtual environment (recommended)
-
-### Installation
-
+2. Create and activate virtual environment:
 ```bash
-# Clone repository
-git clone <url>
-
-# Create virtual environment
 python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
 
-# Install dependencies
+3. Install dependencies:
+```bash
 pip install -r requirements.txt
 ```
 
-## 💻 Usage
-
-### Training Configuration
-
+4. Train the model:
 ```bash
 python src/train.py \
-    --train-data data/Google_Stock_Price_Train.csv \
-    --test-data data/Google_Stock_Price_Test.csv \
+    --train-file dataset/Google_Stock_Price_Train.csv \
+    --test-file dataset/Google_Stock_Price_Test.csv \
+    --sequence-length 60 \
     --epochs 100 \
     --batch-size 32 \
-    --sequence-length 60
+    --use-features
 ```
 
-### Configuration Options
+## 🏗️ Project Structure
 
-| Parameter | Description | Default |
-|-----------|-------------|---------|
-| `--train-data` | Training dataset path | Required |
-| `--test-data` | Test dataset path | Required |
-| `--epochs` | Training epochs | 100 |
-| `--batch-size` | Batch size | 32 |
-| `--sequence-length` | Lookback window | 60 |
-
-## 🎯 Model Architecture
-
-### Components
-- **LSTM Layers**
-  - 3x LSTM layers (50 units each)
-  - Dropout (0.2) for regularization
-  - Dense output layer
-
-## 📊 Data Requirements
-
-### Input Format
-```csv
-Date,Open,High,Low,Close,Volume
-2022-01-01,2500.00,2550.00,2480.00,2520.00,1000000
-...
+```
+rnn/
+├── dataset/                    # Stock price datasets
+│   ├── Google_Stock_Price_Train.csv
+│   └── Google_Stock_Price_Test.csv
+├── src/                       # Source code
+│   ├── model.py              # LSTM model architecture
+│   ├── data_processor.py     # Data preprocessing pipeline
+│   ├── evaluation.py         # Evaluation metrics & visualization
+│   └── train.py             # Training script
+├── tests/                    # Unit tests
+│   ├── test_model.py
+│   ├── test_data_processor.py
+│   └── test_evaluation.py
+├── requirements.txt          # Project dependencies
+├── setup.py                 # Package configuration
+└── README.md               # Documentation
 ```
 
-## 📈 Performance Visualization
+## 🔧 Advanced Configuration
 
-Track model performance through:
-- Real-time training metrics
-- Prediction accuracy plots
-- Loss convergence curves
+### Model Architecture
+```python
+model = StockPredictor(
+    sequence_length=60,
+    n_features=6,  # When using technical indicators
+    lstm_units=[100, 50, 50],
+    dropout_rates=[0.3, 0.2, 0.2],
+    bidirectional=True,
+    use_batch_norm=True,
+    learning_rate=0.001
+)
+```
+
+### Feature Selection
+```python
+features = [
+    'Close',      # Stock closing price
+    'MA7',        # 7-day moving average
+    'MA20',       # 20-day moving average
+    'RSI',        # Relative Strength Index
+    'MACD',       # Moving Average Convergence Divergence
+    'BB_middle'   # Bollinger Band middle line
+]
+```
+
+## 📊 Evaluation Metrics
+
+The model's performance is evaluated using:
+- Mean Squared Error (MSE)
+- Root Mean Squared Error (RMSE)
+- Mean Absolute Error (MAE)
+- R² Score
+- Mean Absolute Percentage Error (MAPE)
+- Direction Accuracy
+
+## 🧪 Testing
+
+Run the test suite:
+```bash
+pytest tests/
+```
+
+## 🔍 Model Output
+
+The model generates:
+- Trained model weights
+- Training history plots
+- Prediction vs actual plots
+- Error distribution analysis
+- Comprehensive evaluation report
+
+## 📈 Sample Results
+
+Check the `experiments/` directory after training for:
+- Training history visualization
+- Prediction plots
+- Error analysis
+- Performance metrics
 
 ## 🤝 Contributing
 
-We welcome contributions! Follow these steps:
-
-1. 🍴 Fork the repository
-2. 🌿 Create your feature branch
-   ```bash
-   git checkout -b feature/AmazingFeature
-   ```
-3. 💫 Commit your changes
-   ```bash
-   git commit -m 'Add some AmazingFeature'
-   ```
-4. 📤 Push to the branch
-   ```bash
-   git push origin feature/AmazingFeature
-   ```
-5. 🎁 Open a Pull Request
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 🙏 Acknowledgments
+## 📚 References
 
-- Dataset: Google Stock Price historical data
-- Architecture: Based on state-of-the-art LSTM research
-- Community: TensorFlow and Python ecosystems
-
----
-<p align="center">
-  <i>Built with 📊 by <a href="https://github.com/YanCotta">Yan Cotta</a></i>
-</p>
+1. [LSTM Networks for Time Series Prediction](https://arxiv.org/abs/1902.10877)
+2. [Technical Analysis in Financial Markets](https://www.sciencedirect.com/science/article/abs/pii/S0927539804000829)
+3. [Deep Learning for Time Series Forecasting](https://arxiv.org/abs/2004.13408)
