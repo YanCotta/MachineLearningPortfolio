@@ -43,6 +43,13 @@ This repository serves as a showcase of my growing expertise in machine learning
   - Includes data preprocessing, model building, and evaluation
   - [Documentation](/deep_learning/ann/README.md)
 
+- **Self-Organizing Maps (SOM)**
+  - Credit card fraud detection using unsupervised learning
+  - Features modular implementation with comprehensive visualization tools
+  - Advanced anomaly detection capabilities
+  - Performance metrics and feature importance analysis
+  - [Documentation](/deep_learning/unsupervised/som/README.md)
+
 - **Convolutional Neural Network (CNN)**
   - Binary Image Classification (Cats vs Dogs)
   - Features modern architecture with batch normalization and dropout
