@@ -53,7 +53,7 @@ def main():
 
         # Load and prepare data
         logger.info("Loading datasets...")
-        train_data, test_data = data_loader.load_data(
+        train_data, validation_data, test_data = data_loader.load_data(
             args.train_dir,
             args.test_dir
         )
@@ -65,7 +65,7 @@ def main():
         logger.info("Starting training...")
         history = trainer.train(
             train_data,
-            test_data,
+            validation_data,
             epochs=args.epochs
         )
 
