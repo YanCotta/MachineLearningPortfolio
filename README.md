@@ -50,6 +50,14 @@ This repository serves as a showcase of my growing expertise in machine learning
   - Performance metrics and feature importance analysis
   - [Documentation](/deep_learning/unsupervised/som/README.md)
 
+- **Hybrid Fraud Detection System**
+  - Combines SOM and ANN for enhanced fraud detection
+  - Multi-modal learning with knowledge transfer
+  - Advanced visualization suite with high-resolution outputs
+  - Production-ready implementation with GPU acceleration
+  - Comprehensive error handling and logging
+  - [Documentation](/deep_learning/hybrid/fraud_detection/README.md)
+
 - **Convolutional Neural Network (CNN)**
   - Binary Image Classification (Cats vs Dogs)
   - Features modern architecture with batch normalization and dropout
