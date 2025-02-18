@@ -72,15 +72,40 @@ fraud_detection/
    ```
 
 2. **Run Analysis**:
+   Basic usage:
    ```bash
    python main.py
+   ```
+
+   Advanced usage with custom parameters:
+   ```bash
+   # Customize SOM and ANN architecture
+   python main.py --som-grid-size 12 --som-learning-rate 0.4 --ann-layers 64,32,16
+
+   # Adjust training parameters
+   python main.py --dropout-rate 0.4 --epochs 150
+
+   # Specify custom paths
+   python main.py --data-path /path/to/data.csv --output-dir /path/to/output
+   ```
+
+   Available options:
+   ```
+   --data-path         Path to the credit card applications dataset
+   --som-grid-size     Size of the SOM grid (default: 10)
+   --som-sigma         Initial neighborhood radius for SOM (default: 1.0)
+   --som-learning-rate Initial learning rate for SOM (default: 0.5)
+   --ann-layers        Hidden layer sizes (e.g., "64,32") or "auto" (default: auto)
+   --dropout-rate      Dropout rate for ANN layers (default: 0.3)
+   --epochs           Number of training epochs for ANN (default: 100)
+   --output-dir       Directory to save visualizations and results
    ```
 
    This will:
    - Load and preprocess the credit card data
    - Train the SOM for initial fraud detection
    - Use SOM results to train the ANN
-   - Generate visualizations in the `output/` directory
+   - Generate visualizations in the specified output directory
    - Save detection results and analysis
 
 ## 📊 How It Works
