@@ -123,6 +123,27 @@ fraud_detection/
   - Automated report generation
   - Interactive plot capabilities
 
+## 🧪 Testing
+The project includes comprehensive test coverage for all components:
+
+```bash
+# Run all tests
+python -m tests.run_tests
+
+# Run specific test suite
+python -m unittest tests.test_data_loader
+python -m unittest tests.test_som_detector
+python -m unittest tests.test_ann_classifier
+python -m unittest tests.test_visualizer
+```
+
+Test suites cover:
+- Data loading and preprocessing validation
+- Model architecture verification
+- Training workflow validation
+- Error handling and edge cases
+- Visualization output verification
+
 ## 🤝 Contributing
 
 1. Fork the repository
